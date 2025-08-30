@@ -23,3 +23,15 @@ module "subnets" {
   project               = var.project
   environment           = var.environment
 }
+
+module "gateways" {
+  source            = "./modules/networking/gateways"
+  vpc_id            = module.vpc.vpc_id
+  nat_subnet_ids    = module.subnets.public_subnet_ids
+  nat_gateway_count = length(module.subnets.public_subnet_ids)
+  igw_tags          = var.igw_tags
+  nat_eip_tags      = var.nat_eip_tags
+  nat_gw_tags       = var.nat_gw_tags
+  project           = var.project
+  environment       = var.environment
+}

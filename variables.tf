@@ -33,3 +33,15 @@ variable "public_tags" {
 variable "private_tags" {
   type    = map(string)
 }
+
+variable "igw_tags" {
+  type    = map(string)
+}
+
+variable "nat_eip_tags" {
+  type    = map(string)
+}
+
+variable "nat_gw_tags" {
+  type    = map(string)
+}
