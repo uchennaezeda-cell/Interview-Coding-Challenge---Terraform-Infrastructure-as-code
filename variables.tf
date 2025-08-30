@@ -17,3 +17,19 @@ variable "vpc_cidr_block" {
 variable "tags" {
   type    = map(string)
 }
+
+variable "public_subnet_cidrs" {
+  type    = list(string)
+}
+
+variable "private_subnet_cidrs" {
+  type    = list(string)
+}
+
+variable "public_tags" {
+  type    = map(string)
+}
+
+variable "private_tags" {
+  type    = map(string)
+}
