@@ -17,3 +17,11 @@ output "igw_id" {
 output "nat_gateway_ids" {
   value = module.gateways.nat_gateway_ids
 }
+
+output "public_route_table_id" {
+  value = module.route_tables.public_route_table_id
+}
+
+output "private_route_table_ids" {
+  value = module.route_tables.private_route_table_ids
+}

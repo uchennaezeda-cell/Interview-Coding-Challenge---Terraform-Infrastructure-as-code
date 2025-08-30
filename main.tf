@@ -35,3 +35,16 @@ module "gateways" {
   project           = var.project
   environment       = var.environment
 }
+
+module "route_tables" {
+  source                   = "./modules/networking/route-tables"
+  vpc_id                   = module.vpc.vpc_id
+  igw_id                   = module.gateways.igw_id
+  nat_gateway_ids          = module.gateways.nat_gateway_ids
+  public_subnet_ids        = module.subnets.public_subnet_ids
+  private_subnet_ids       = module.subnets.private_subnet_ids
+  public_tags              = var.public_route_table_tags
+  private_tags             = var.private_route_table_tags
+  project                  = var.project
+  environment              = var.environment
+}

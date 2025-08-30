@@ -45,3 +45,11 @@ variable "nat_eip_tags" {
 variable "nat_gw_tags" {
   type    = map(string)
 }
+
+variable "public_route_table_tags" {
+  type    = map(string)
+}
+
+variable "private_route_table_tags" {
+  type    = map(string)
+}
