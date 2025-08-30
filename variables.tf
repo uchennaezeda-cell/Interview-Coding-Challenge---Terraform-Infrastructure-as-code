@@ -53,3 +53,7 @@ variable "public_route_table_tags" {
 variable "private_route_table_tags" {
   type    = map(string)
 }
+
+variable "sg_tags" {
+  type    = map(string)
+}

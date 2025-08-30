@@ -25,3 +25,7 @@ output "public_route_table_id" {
 output "private_route_table_ids" {
   value = module.route_tables.private_route_table_ids
 }
+
+output "security_group_id" {
+  value = module.security_group.security_group_id
+}
