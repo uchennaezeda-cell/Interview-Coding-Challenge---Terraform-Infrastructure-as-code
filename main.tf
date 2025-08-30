@@ -56,3 +56,14 @@ module "security_group" {
   environment = var.environment
   tags        = var.sg_tags
 }
+
+module "ec2" {
+  source            = "./modules/compute/ec2"
+  ami               = var.ec2_ami
+  instance_type     = var.ec2_instance_type
+  subnet_id         = module.subnets.public_subnet_ids[0]
+  security_group_id = module.security_group.security_group_id
+  project           = var.project
+  environment       = var.environment
+  tags              = var.ec2_tags
+}

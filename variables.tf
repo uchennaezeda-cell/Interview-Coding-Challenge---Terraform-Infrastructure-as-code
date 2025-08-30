@@ -57,3 +57,17 @@ variable "private_route_table_tags" {
 variable "sg_tags" {
   type    = map(string)
 }
+
+variable "ec2_tags" {
+  type    = map(string)
+}
+
+variable "ec2_ami" {
+  type    = string
+  default = "ami-0c94855ba95c71c99"
+}
+
+variable "ec2_instance_type" {
+  type    = string
+  default = "t2.micro"
+}

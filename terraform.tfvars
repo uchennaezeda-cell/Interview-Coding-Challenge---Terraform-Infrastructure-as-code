@@ -52,3 +52,11 @@ private_route_table_tags = {
 sg_tags = {
   Name = "TF-SG"
 }
+
+ec2_ami = "ami-02d26659fd82cf299"
+
+ec2_instance_type = "t2.micro"
+
+ec2_tags = {
+  Name = "TF-EC2"
+}
